@@ -49,6 +49,7 @@
         var lossCountSpan = document.getElementById("c_score");
         var chanceCount = document.getElementById("chances");
         var selected = document.getElementById("selected");
+        var wrongLetter = [];
 
         // this a string of letters used in the game
         var letters = "abcdefghijklmnopqrstuvwxyz";
@@ -66,13 +67,14 @@
                 } else {
                     chances--;
                     chanceCount.innerHTML = chances;
-                    selected.innerHTML = userGuess ;
+                    wrongLetter.push(userGuess);
+                    selected.innerHTML = wrongLetter + " ";
                 }
 
                 if (chances === 0) {
                     losses++;
                     lossCountSpan.innerHTML = losses;
-                    chances = 9;
+                    chances = 10;
                 }
 
             }
