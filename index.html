@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Psychic Game</title>
+    <link rel="stylesheet" type="text/css" href="assets/reset.css">
+    <link rel="stylesheet" type="text/css" href="assets/style.css">
+</head>
+
+<body>
+    <header>
+        <h1> Psychic Letter Game</h1>
+    </header>
+    <p id="top">Guess what letter I am Thinking of </p>
+
+    <div id="game">
+        <div id="win_label" class="label">Human: </div>
+        <div id="loss_label" class="label">Machine: </div>
+        <span id="h_score">0</span>:
+        <span id="c_score">0</span>
+    </div>
+
+    <div id="counterBox">
+        <div class="guessleft">
+            <h3 class="guessText">You Have </h3>
+            <h3 id="chances">9</h3>
+            <h3> Guess Left!</h3>
+        </div>
+        <div class="guessmade">
+            <h4>You Guessed The Following: </h4>
+            <h4 id="selected"></h4>
+        </div>
+
+    </div>
+
+    <p id="action">Make Your Move Press A Letter Sugar Cup!</p>
+
+    <script type="text/javascript">
+        // these are my variables for the game all set to values needed
+        var wins = 0;
+        var losses = 0;
+        var chances = 9;
+
+        // these are my variables to associate element by ID that will change on the front end
+        var userCountSpan = document.getElementById("h_score");
+        var lossCountSpan = document.getElementById("c_score");
+        var chanceCount = document.getElementById("chances");
+        var selected = document.getElementById("selected");
+
+        // this a string of letters used in the game
+        var letters = "abcdefghijklmnopqrstuvwxyz";
+
+            var computerChoice = letters[Math.floor(Math.random(letters.length) * 26)];
+            console.log(computerChoice);
+
+
+            document.onkeyup = function (event) {
+                var userGuess = event.key;
+
+                if (userGuess === computerChoice) {
+                    wins++;
+                    userCountSpan.innerHTML = wins;
+                } else {
+                    chances--;
+                    chanceCount.innerHTML = chances;
+                    selected.innerHTML = userGuess ;
+                }
+
+                if (chances === 0) {
+                    losses++;
+                    lossCountSpan.innerHTML = losses;
+                    chances = 9;
+                }
+
+            }
+
+    </script>
+    </div>
+
+</body>
+
+</html>

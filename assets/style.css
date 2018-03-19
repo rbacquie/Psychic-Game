@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css?family=Asap:400,500,700');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgb(25, 25, 44)
+}
+
+p {
+    text-align: center;
+    font-size: 30px;
+    font-family: Asap, Helvetica, sans-serif;
+    font-weight: bold;
+    color: white;
+}
+
+header {
+    background: beige;
+    padding: 20px;
+    color: rgb(6, 6, 17);
+    text-align: center;
+    font-family: Asap, Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: 35px;
+}
+
+#top {
+    margin-top: 30px;
+}
+
+#game {
+    position: relative;
+    margin: 20px auto;
+    border: 3px solid white;
+    padding: 15px 20px;
+    width: 200px;
+    color: white;
+    text-align: center;
+    font-size: 46px;
+    border-radius: 6px;
+    font-family: Asap, san sans-serif;
+}
+
+.label {
+    background-color: red;
+    color: white;
+    font-size: 15px;
+    padding: 2px 10px;
+    font-family: Asap, sans-serif;
+}
+
+#win_label {
+    position: absolute;
+    top: 30px;
+    left: -40px;
+}
+
+
+#loss_label {
+    position: absolute;
+    top: 30px;
+    right: -40px;
+}
+
+#h_score {
+    margin-right: 12px;
+}
+
+#counterBox {
+    color: white;
+    font-family: Asap, sans-serif;
+    text-align: center;
+}
+
+#chances {
+    color: springgreen;
+}
+
+.guessleft {
+    margin-bottom: 20px;
+}
+
+#action {
+    margin-top: 40px;
+    text-align: center;
+    color: white;
+    font-family: Asap, san sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+}
