@@ -64,6 +64,7 @@
                 if (userGuess === computerChoice) {
                     wins++;
                     userCountSpan.innerHTML = wins;
+                    wrongLetter = "";
                 } else {
                     chances--;
                     chanceCount.innerHTML = chances;
@@ -75,6 +76,7 @@
                     losses++;
                     lossCountSpan.innerHTML = losses;
                     chances = 10;
+                    wrongLetter = "";
                 }
 
             }
